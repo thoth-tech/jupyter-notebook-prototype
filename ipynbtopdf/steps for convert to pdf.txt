@@ -1,0 +1,11 @@
+First we need to install nbconvert....
+pip install nbconvert
+
+Then pandoc
+sudo apt-get install pandoc
+
+Then TeX
+sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic
+
+Then we can run the command
+jupyter nbconvert --to pdf NOTEBOOK_NAME.ipynb
