@@ -1,4 +1,0 @@
-# requirements file can be used to list dependencies and make sure they are the correct version.
-# for now we just use nbconvert and pandoc, and it can be any version
-nbconvert
-pandoc
