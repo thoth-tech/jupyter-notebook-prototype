@@ -1,7 +1,7 @@
 #FROM python:3.9-bullseye
 FROM continuumio/miniconda3:latest
 
-COPY . .
+COPY notebook.ipynb .
 
 RUN conda install nbconvert
 # if we need additional python libraries, they can be installed in the container here.
