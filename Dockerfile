@@ -1,8 +1,12 @@
 FROM ruby:3.1-buster
 
-RUN apt-get update && apt-get install -y
+#RUN apt-get update && apt-get install -y
 
 WORKDIR /jupyter-notebook-prototype
+
+# COPY . .
+# RUN bundle install
+
 
 # # Install the Gems
 # COPY ./Gemfile ./Gemfile.lock /jupyter-notebook-prototype/
