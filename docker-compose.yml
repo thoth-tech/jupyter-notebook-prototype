@@ -1,7 +1,22 @@
+version: '3'
 services:
-  jupyter-notebook-prototype-api:
-    build: .
+  api:
+    container_name: jupyter-notebook-prototype-api
+    build: ./jupyter-notebook-prototype-api
     ports:
       - "3000:3000"
     volumes:
-      - .:/jupyter-notebook-prototype
+      - .:/jupyter-notebook-prototype-api:/api
+    #
+    command: /bin/bash -c 'rm -f /api/tmp/pids/server.pid && rails s -b 0.0.0.0'
+
+  ui:
+    container_name: jupyter-notebook-prototype-ui
+    build: ./jupyter-notebook-prototype-ui
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/jupyter-notebook-prototype-ui:/ui
+    depends_on:
+      - api
+    command: /bin/bash -c 'npm install; npm start'
