@@ -6,8 +6,9 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/jupyter-notebook-prototype-api:/api
-    #
+      - ./jupyter-notebook-prototype-api:/api
+      - ./data/student-work:/student-work
+      #docker run --volumes-from jupyter-notebook-prototype-api --rm bash:latest -c "ls /student-work/"
     command: /bin/bash -c 'rm -f /api/tmp/pids/server.pid && rails s -b 0.0.0.0'
 
   # ui:
