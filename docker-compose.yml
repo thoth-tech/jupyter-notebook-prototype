@@ -11,13 +11,13 @@ services:
       #docker run --volumes-from jupyter-notebook-prototype-api --rm bash:latest -c "ls /student-work/"
     command: /bin/bash -c 'rm -f /api/tmp/pids/server.pid && rails s -b 0.0.0.0'
 
-  # ui:
-  #   container_name: jupyter-notebook-prototype-ui
-  #   build: ./jupyter-notebook-prototype-ui
-  #   ports:
-  #     - "4200:4200"
-  #   volumes:
-  #     - .:/jupyter-notebook-prototype-ui:/ui
-  #   depends_on:
-  #     - api
-  #   command: /bin/bash -c 'npm install; npm start'
+  ui:
+    container_name: jupyter-notebook-prototype-ui
+    build: ./jupyter-notebook-prototype-ui
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./jupyter-notebook-prototype-ui:/jupyter-notebook-prototype-ui
+    depends_on:
+      - api
+    command: /bin/bash -c 'npm install; npm start'
