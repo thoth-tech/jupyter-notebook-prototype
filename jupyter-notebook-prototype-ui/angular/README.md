@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
 
+## Before running program
+
+Before runing the program please, use npm to download the node_modules. If not working or unable to get correct node_modules unzip the angular.zip file to have access to the 40,000+ node libraries.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
