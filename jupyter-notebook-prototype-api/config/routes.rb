@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root to: "pages#index" #route to the index using the pages controller while there is no front end
+  get 'converter/convert' # request to convert will map to converter controller
 end
