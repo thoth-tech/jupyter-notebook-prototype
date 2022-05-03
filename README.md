@@ -1,9 +1,5 @@
-# Jupyter Notebook Prototype README
+# Jupyter Notebook Team Prototype Docker Containers
 
-## Running the app
+## nbtopdf
 
-Running the prototype should be as simple opening up the root directory and running
-
-```
-docker compose up
-```
+## docxtopdf
