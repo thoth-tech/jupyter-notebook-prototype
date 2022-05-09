@@ -12,6 +12,4 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir /convert
 WORKDIR /convert
 
-# copies the input ipynb to the working directory
-# in the real version of this, the input will not need to be copied, and will instead be already in a shared volume that other containers will be able to access.
-COPY input.ipynb .
+ENTRYPOINT [ "bash", "-c", "jupyter nbconvert --to pdf data/input.ipynb --output=output.pdf" ]
