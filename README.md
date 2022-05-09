@@ -8,7 +8,7 @@ docker build ./nbtopdf -t nbtopdf
 ```
 The `-t` option specifies that the image will be called 'nbtopdf'.
 
-Run the conversion process using the script `run-nbtopdf.sh`
+Run the conversion process using the "run-nbtopdf.sh" bash script
 ```sh
 bash run-nbtopdf.sh
 ```
