@@ -31,6 +31,15 @@ except the file type suffix.
 # Considerations
 In order to run the program, you must have a file to convert in the src/main/input folder before running the application.
 
+# Response Codes
+0 - The program successfully converted all files in the src/main/input directory to .pdf, and placed
+them in the src/main/output directory.
+
+101 - The program did not find any files in the src/main/input directory to convert.
+
+102 - The program found files in the src/main/input directory, but either all or some of the files
+were not converted.
+
 ### Author
 Jordan Litsas
 
