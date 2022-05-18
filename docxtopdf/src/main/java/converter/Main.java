@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        System.out.println("Hello World"); // test 
+
         Scanner runCommandScanner = new Scanner(System.in);
         String runCommand = runCommandScanner.nextLine();
 
@@ -38,7 +40,7 @@ public class Main {
             int outputFolderLength = new File("output").list().length;
             String outputMessage = outputFolderLength == inputFileNames.length ? "0" : "102";
             System.out.println(outputMessage);
-            
+
         } else {
             System.out.println("101");
         }
