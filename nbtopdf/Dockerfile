@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # create a working directory
-RUN mkdir /convert
-WORKDIR /convert
+WORKDIR /
 
-ENTRYPOINT [ "bash", "-c", "jupyter nbconvert --to pdf data/input.ipynb --output=output.pdf" ]
+ENTRYPOINT [ "bash", "-c", "jupyter nbconvert --to pdf nbtopdf-data/input.ipynb --output=output.pdf" ]
