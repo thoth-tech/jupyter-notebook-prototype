@@ -3,13 +3,13 @@
 ## nbtopdf
 
 First make sure to build the image from the Dockerfile
-```sh
+```shell
 docker build ./nbtopdf -t nbtopdf
 ```
 The `-t` option specifies that the image will be called 'nbtopdf'.
 
 Run the conversion process using the "run-nbtopdf.sh" bash script
-```sh
+```shell
 bash run-nbtopdf.sh
 ```
 
@@ -18,9 +18,13 @@ If everything went correctly, the converted file called "output.pdf" should be m
 ## docxtopdf
 
 First make sure to build the image from the Dockerfile
-```sh
+```shell
 docker build ./docxtopdf -t docxtopdf
 ```
 The `-t` option specifies that the image will be called 'docxtopdf'.
 
-docker run --rm -it --name docxtopdf-container docxtopdf
+```shell
+bash run-docxtopdf.sh
+```
+
+If everything went correctly, the converted file called "output.pdf" should be moved into the root directory.
