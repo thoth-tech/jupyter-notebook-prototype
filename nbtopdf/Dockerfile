@@ -8,8 +8,4 @@ RUN apt-get update && apt-get install -y \
     texlive-xetex texlive-fonts-recommended texlive-plain-generic \
     && rm -rf /var/lib/apt/lists/*
 
-# create a working directory
-RUN mkdir /convert
-WORKDIR /convert
-
-ENTRYPOINT [ "bash", "-c", "jupyter nbconvert --to pdf data/input.ipynb --output=output.pdf" ]
+ENTRYPOINT [ "bash", "-c", "jupyter nbconvert --to pdf nbtopdf-data/input.ipynb --output=output.pdf" ]
