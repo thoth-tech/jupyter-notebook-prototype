@@ -32,7 +32,7 @@ public class Main {
             String outputMessage = dataFolderLength == 2 ? "0" : "1";
             System.out.println(outputMessage);
         } else {
-            System.out.println("101");
+            System.out.println("1");
         }
     }
 }
