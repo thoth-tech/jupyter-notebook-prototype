@@ -9,13 +9,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        //put all filenames in inputFile into array list
-        File inputFile = new File("./docxtopdf-data/input.docx");
+        File inputFile = new File("/docxtopdf-data/input.docx");
         if (inputFile != null) {
             //Removes .docx from file name, and converts it to pdf.
             try (
                     InputStream is = new FileInputStream(inputFile);
-                    OutputStream out = new FileOutputStream(new File("./docxtopdf-data/output.pdf"));
+                    OutputStream out = new FileOutputStream(new File("/docxtopdf-data/output.pdf"));
             ) {
                 // 1) Load DOCX into XWPFDocument
                 XWPFDocument document = new XWPFDocument(is);
