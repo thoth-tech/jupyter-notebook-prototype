@@ -7,7 +7,6 @@ See https://github.com/thoth-tech/documentation/blob/main/docs/OnTrack/Jupyter%2
     ```shell
     docker build --rm ./nbtopdf -t nbtopdf
     ```
-    The `-t` option specifies that the image will be called 'nbtopdf'.
 
 2. Run the conversion process using the "run-nbtopdf" bash script
     ```shell
@@ -21,7 +20,6 @@ See https://github.com/thoth-tech/documentation/blob/main/docs/OnTrack/Jupyter%2
     ```shell
     docker build --rm ./docxtopdf -t docxtopdf
     ```
-    The `-t` option specifies that the image will be called 'docxtopdf'.
 
 2. Run the conversion process using the "run-docxtopdf" bash script
     ```shell
